@@ -12,17 +12,17 @@ const App = () => {
 
   return (
     <div>
-      <h1>{course}</h1>
-      <p>
-        {part1.name} {part1.exercises1}
-      </p>
-      <p>
-        {part2.name} {part2.exercises2}
-      </p>
-      <p>
-        {part3.name} {part3.exercises3}
-      </p>
-      <p>Total = {part1.exercises1 + part2.exercises2 + part3.exercises3} </p>
+      <Header course={course} />
+      <Content
+        part1={part1.name}
+        exercises1={part1.exercises1}
+        part2={part2.name}
+        exercises2={part2.exercises2}
+        part3={part3.name}
+        exercises3={part3.exercises3}
+      />
+
+      <Total total={part1.exercises1 + part2.exercises2 + part3.exercises3} />
     </div>
   );
 };
