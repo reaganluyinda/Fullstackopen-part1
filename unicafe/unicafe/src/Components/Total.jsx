@@ -1,4 +1,4 @@
-const Total = (props) => {
-  return <p>All {props.good + props.neutral + props.bad}</p>;
+const Total = ({ good, neutral, bad }) => {
+  return <p>All {good + neutral + bad}</p>;
 };
 export default Total;
