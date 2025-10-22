@@ -3,6 +3,7 @@ import Button from "./Components/Button.jsx";
 import Header from "./Components/Header.jsx";
 import Display from "./Components/Display.jsx";
 import Total from "./Components/Total.jsx";
+import Average from "./Components/Average.jsx";
 function App() {
   const title = "Give Feedback";
   const subTitle = "Statistics";
@@ -31,6 +32,7 @@ function App() {
       <Header subTitle={subTitle} />
       <Display good={good} neutral={neutral} bad={bad} />
       <Total good={good} neutral={neutral} bad={bad} />
+      <Average good={good} neutral={neutral} bad={bad} />
     </div>
   );
 }
