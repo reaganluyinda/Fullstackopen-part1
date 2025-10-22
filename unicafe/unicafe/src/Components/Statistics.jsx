@@ -7,9 +7,16 @@ const Statistics = ({ subTitle, good, neutral, bad }) => {
   return (
     <div>
       <Header subTitle={subTitle} />
-      <Display good={good} neutral={neutral} bad={bad} />
-      <Total good={good} neutral={neutral} bad={bad} />
-      <Average good={good} neutral={neutral} bad={bad} />
+      {good === 0 && neutral === 0 && bad === 0 ? (
+        <p>No feedback given</p>
+      ) : (
+        <>
+          {" "}
+          <Display good={good} neutral={neutral} bad={bad} />
+          <Total good={good} neutral={neutral} bad={bad} />
+          <Average good={good} neutral={neutral} bad={bad} />
+        </>
+      )}
     </div>
   );
 };
