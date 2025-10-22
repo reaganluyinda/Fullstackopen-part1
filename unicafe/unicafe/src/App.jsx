@@ -2,6 +2,7 @@ import { useState } from "react";
 import Button from "./Components/Button.jsx";
 import Header from "./Components/Header.jsx";
 import Display from "./Components/Display.jsx";
+import Total from "./Components/Total.jsx";
 function App() {
   const title = "Give Feedback";
   const subTitle = "Statistics";
@@ -29,6 +30,7 @@ function App() {
       <Button onClick={handleBadClick} text="bad" />
       <Header subTitle={subTitle} />
       <Display good={good} neutral={neutral} bad={bad} />
+      <Total good={good} neutral={neutral} bad={bad} />
     </div>
   );
 }

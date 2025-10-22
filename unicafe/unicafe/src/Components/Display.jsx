@@ -1,6 +1,4 @@
 const Display = ({ good, neutral, bad }) => {
-  console.log(good, neutral, bad);
-
   return (
     <div>
       <p>Good {good}</p>
