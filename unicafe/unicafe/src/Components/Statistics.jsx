@@ -9,18 +9,16 @@ const Statistics = ({ subTitle, good, neutral, bad }) => {
   return (
     <div>
       <Header subTitle={subTitle} />
-      {good === 0 && neutral === 0 && bad === 0 ? (
-        <p>No feedback given</p>
-      ) : (
-        <div>
+      <table>
+        <tbody>
           <StatisticLine text="Good" value={good} />
           <StatisticLine text="Neutral" value={neutral} />
           <StatisticLine text="Bad" value={bad} />
           <StatisticLine text="Total" value={Total} />
           <StatisticLine text="Average" value={average} />
           <StatisticLine text="Positive" value={`${positive} %`} />
-        </div>
-      )}
+        </tbody>
+      </table>
     </div>
   );
 };
